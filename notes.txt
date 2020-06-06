@@ -17,5 +17,5 @@ cat ~/.ssh/id_rsa.pub //to display
 
 -------- push an existing repository -----------
 
-git remote add origin https://github.com/vamshi0108/notes-app.git   //remote name is origin (by default)
+git remote add origin https://github.com/vamshi0108/notes-app.git  //remote name is origin (by default)
 git push -u origin master (-u makes origin as default repo)  //master is branch
