@@ -9,3 +9,12 @@ git commit -m "Init commit"
 
 ssh-keygen -t rsa -b 4096 -C "vamshinagulapally2@gmail.com" //Email id is comments part
 ls ~/.ssh
+//id_rsa - secret file 
+//id_rsa.pub - public file (we can share with GitHub and Heroku)
+eval $(ssh-agent) //To start ssh agent - Git Bash
+ssh-add ~/.ssh/id_rsa //Register the file - Git Bash
+
+-------- push an existing repository -----------
+
+git remote add origin https://github.com/vamshi0108/notes-app.git   //remote name is origin (by default)
+git push -u origin master (-u makes origin as default repo)
