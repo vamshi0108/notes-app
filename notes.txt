@@ -1,0 +1,11 @@
+------ git basic -------
+
+git init
+git add .
+git status
+git commit -m "Init commit"
+
+------ ssh commands --------
+
+ssh-keygen -t rsa -b 4096 -C "vamshinagulapally2@gmail.com" //Email id is comments part
+ls ~/.ssh
