@@ -23,7 +23,7 @@ git checkout notes
 git pull
 ```
 
-## npm packages used
+## npm Packages Used
 
 ```
 chalk
@@ -44,4 +44,4 @@ You can use [Heroku] (https://dashboard.heroku.com/apps) for live deployment.
 
 * **Vamshi Nagulapally** - *Initial work* - [Git](https://github.com/vamshi0108)
 
-Copyright 2020 Vamshi Nagulapally
+#### Copyright 2020 Vamshi Nagulapally
