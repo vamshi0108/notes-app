@@ -34,7 +34,7 @@ nodemon
 
 ## Deployment
 
-You can use [Heroku] (https://dashboard.heroku.com/apps) for live deployment.
+You can use [Heroku](https://dashboard.heroku.com/apps) for live deployment.
 
 ## Built With
 
