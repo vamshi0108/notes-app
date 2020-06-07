@@ -1,21 +1,26 @@
 const validator = require("validator").default;
-const add = require("./utils.js")();
+const util = require("./utils.js");
 const chalk = require("chalk");
 const yargs = require("yargs");
 const log = console.log;
 
 yargs.command({
-  command: 'read',
+  command: 'add',
   describe: 'To read the data',
   builder: {
-    number: {
-      describe: 'This is number of pages',
+    title: {
+      describe: 'Title of the notes',
       demandOption: true,
-      type: 'number'
+      type: 'String'
+    },
+    body: {
+      describe: 'Notes content',
+      demandOption: true,
+      type: 'String'
     }
   },
   handler: function(argv){
-    log('Number of pages', argv.number)
+    util.addNotes(argv.title, argv.body)
   }
 })
 
