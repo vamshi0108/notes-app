@@ -1,1 +1,5 @@
-[{"title":"Node","body":"Javascript"},{"title":"Node2","body":"Javascript2"},{"title":"node","body":"Js language"}]
+[
+  { "title": "node", "body": "Js language" },
+  { "title": "java", "body": "java core language" },
+  { "title": "python", "body": "core 1 language" }
+]

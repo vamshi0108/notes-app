@@ -5,26 +5,76 @@ const yargs = require("yargs");
 const log = console.log;
 
 yargs.command({
-  command: 'add',
-  describe: 'To read the data',
+  command: "add",
+  describe: "To read the data",
   builder: {
     title: {
-      describe: 'Title of the notes',
+      describe: "Title of the notes",
       demandOption: true,
-      type: 'String'
+      type: "String",
     },
     body: {
-      describe: 'Notes content',
+      describe: "Notes content",
       demandOption: true,
-      type: 'String'
-    }
+      type: "String",
+    },
   },
-  handler: function(argv){
-    util.addNotes(argv.title, argv.body)
-  }
-})
+  handler: function (argv) {
+    util.addNotes(argv.title, argv.body);
+  },
+});
 
-yargs.parse()
+yargs.command({
+  command: "delete",
+  describe: "To delete the data",
+  builder: {
+    title: {
+      describe: "Title of the notes",
+      demandOption: true,
+      type: "String",
+    },
+  },
+  handler: function (argv) {
+    util.deleteNotes(argv.title);
+  },
+});
+
+yargs.command({
+  command: "view",
+  describe: "To View the requested data",
+  builder: {
+    title: {
+      describe: "Title of the notes",
+      demandOption: true,
+      type: "String",
+    },
+  },
+  handler: function (argv) {
+    util.viewNotes(argv.title);
+  },
+});
+
+yargs.command({
+  command: "modify",
+  describe: "To modify the requested data",
+  builder: {
+    title: {
+      describe: "Title of the notes",
+      demandOption: true,
+      type: "String",
+    },
+    body: {
+      describe: "Notes content",
+      demandOption: true,
+      type: "String",
+    },
+  },
+  handler: function (argv) {
+    util.modifyNotes(argv.title, argv.body);
+  },
+});
+
+yargs.parse();
 // log(validator.isEmail("sa"));
 // log(chalk.redBright.bgYellow("I am background yellow"));
 // log(validator.isEmpty(""));
