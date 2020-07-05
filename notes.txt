@@ -19,3 +19,20 @@ cat ~/.ssh/id_rsa.pub //to display
 
 git remote add origin https://github.com/vamshi0108/notes-app.git  //remote name is origin (by default)
 git push -u origin master (-u makes origin as default repo)  //master is branch
+
+
+---------- add notes --------------
+
+node .\app.js add --title="C++" --body="old language"
+
+---------- delete notes --------------
+
+node .\app.js delete --title="C++"
+
+---------- view notes --------------
+
+node .\app.js view --title="C++"
+
+---------- modify notes --------------
+
+node .\app.js modify --title="C++" --body="old language"
